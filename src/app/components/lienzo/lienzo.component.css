@@ -1,0 +1,6 @@
+section{
+    background-color: #fff;
+}
+.container-canva, canvas{
+    border: 1px solid black;
+}

@@ -1,0 +1,16 @@
+<main class="container-canva">
+    <section>
+        <canvas
+            #canvas
+            [width]="canvasWidth"
+            [height]="canvasHeight"
+            (mousedown)="startDrawing($event,selectedColor,penThickness)"
+            (mouseup)="endDrawing()"
+            (mousemove)="draw($event)"
+            (mouseleave)="endDrawing()"
+        ></canvas>
+        <button (click)="clearCanvas()">Limpiar Lienzo</button>
+        <button (click)="regresarUltimoTrazo()">Regresar atras</button>
+        <input type="range" id="size-slider" min="1" max="30" [(ngModel)]="penThickness" (input)="seleccionarGrosor($event)">
+    </section>
+</main>
